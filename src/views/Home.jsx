@@ -4,8 +4,8 @@ const Home = () => {
   return (
     <>
       <section className='bg-image w-100' style={{ paddingTop: '70px' }}>
-        <div className='container'>
-          <div className='row justify-content-center align-items-end pb-5' style={{ height: '700px' }}>
+        <div className='container newsss'>
+          <div className='row justify-content-center align-items-end pb-5 banner_height'>
             <div className='col-lg-10'>
               <h1 className='text-white text-center fw-bold font_banner_text'>Welcome to Casino Conquest</h1>
               <h2 className='text-uppercase text-center banner_text_color fw-bold'>Experience the Ultimate Thrill of Card Games</h2>
@@ -14,7 +14,7 @@ const Home = () => {
                 all in a visually stunning, user-friendly environment.
               </p>
               <div className='text-center mb-5'>
-                <button className='text-white btn_background_color px-4 py-2 border-0'>ALL GAMES</button>
+                <button className='text-white btn_background_color px-4 py-2 border-0 btn_hover'>ALL GAMES</button>
               </div>
             </div>
           </div>
@@ -51,13 +51,39 @@ const Home = () => {
                 <p className='text-white'>
                   Vulputate cursus commodo rutrum massa tellus. Enim orci leo egestas in eget venenatis nunc tellus. Laoreet lectus quam velit morbi amet cursus nunc eget.
                 </p>
-                <p className='text-white'>Last Update: 01/01/2024 16:04:28</p>
+                <div className='big_screen_display_none'>
+                  <div className='row border-bottom_color py-3 '>
+                    <div className='col-6 align-self-center big_screen_display_none'>
+                      <p className='text-white mb-0'>Progressive Jackpot 10%</p>
+                    </div>
+                    <div className='col-6 text-end big_screen_display_none'>
+                      <h2 className='text-white'>$ 10,000.00</h2>
+                    </div>
+                  </div>
+                  <div className='row border-bottom_color py-3 '>
+                    <div className='col-6 align-self-center '>
+                      <p className='text-white mb-0'>Progressive Jackpot 100%</p>
+                    </div>
+                    <div className='col-6 text-end '>
+                      <h2 className='text-white'>$ 100,000.00</h2>
+                    </div>
+                  </div>
+                  <div className='row border-bottom_color py-3'>
+                    <div className='col-6 align-self-center '>
+                      <p className='text-white mb-0'>Progressive Bad Beat Jackpot</p>
+                    </div>
+                    <div className='col-6 text-end'>
+                      <h2 className='text-white'>$ 100,000.00</h2>
+                    </div>
+                  </div>
+                </div>
+                <p className='text-white mt-3'>Last Update: 01/01/2024 16:04:28</p>
                 <div className='text-left mb-5'>
-                  <button className='text-white btn_background_color px-4 py-2 border-0'>LEARN MORE</button>
+                  <button className='text-white btn_background_color px-4 py-2 border-0 small_screen_button_width btn_hover'>LEARN MORE</button>
                 </div>
               </div>
             </div>
-            <div className='col-lg-6 col-sm-12'>
+            <div className='col-lg-6 col-sm-12 d-none d-md-block'>
               <div className='row border-bottom_color py-3'>
                 <div className='col-lg-6 align-self-center'>
                   <p className='text-white mb-0'>Progressive Jackpot 10%</p>
@@ -134,89 +160,300 @@ const Home = () => {
               <div className="game-icon w-100 text-center">
                 <img src="/public/3-1.PNG" alt="icon" />
               </div>
-              <h4 className="text-center" style={{ color: '#675d5d' }}>Poker</h4>
+              <h4 className="text-center font_color_join">Poker</h4>
             </div>
             <div className="col-md-2">
               <div className="game-icon w-100 text-center">
                 <img src="/public/3-2.PNG" alt="icon" />
               </div>
-              <h4 className=" text-center" style={{ color: '#675d5d' }}>Pure 21.5</h4>
+              <h4 className=" text-center font_color_join">Pure 21.5</h4>
             </div>
             <div className="col-md-2">
               <div className="game-icon w-100 text-center">
                 <img src="/public/3-3.PNG" alt="icon" />
               </div>
-              <h4 className=" text-center" style={{ color: '#675d5d' }}>Baccarat</h4>
+              <h4 className=" text-center font_color_join">Baccarat</h4>
             </div>
             <div className="col-md-2">
               <div className="game-icon w-100 text-center">
                 <img src="/public/3-5.PNG" alt="icon" />
               </div>
-              <h4 className=" text-center" style={{ color: '#675d5d' }}>AKA PAI GOW</h4>
+              <h4 className=" text-center font_color_join">AKA PAI GOW</h4>
             </div>
             <div className="col-md-2">
               <div className="game-icon w-100 text-center">
                 <img src="/public/3-6.PNG" alt="icon" />
               </div>
-              <h4 className=" text-center" style={{ color: '#675d5d' }}>PAI GOW TILES</h4>
+              <h4 className=" text-center font_color_join">PAI GOW TILES</h4>
             </div>
           </div>
           <div className='text-center mt-5'>
-            <button className='text-white btn_background_color px-4 py-2 border-0'>ALL GAMES</button>
+            <button className='text-white btn_background_color px-4 py-2 border-0 btn_hover'>ALL GAMES</button>
           </div>
 
         </div>
       </section>
 
-      <section
-        className="w-100 tournaments-section section-padding">
+      <section className="w-100 tournaments-section section_padding section_padding_padding_top">
         <div className="container text-center">
-          <h1 className='text-uppercase text-white text-center fw-bold breadcrump_size mb-5'>Tournaments</h1>
+          <h1 className="text-uppercase text-white text-center fw-bold breadcrump_size mb-5">
+            Tournaments
+          </h1>
           <div className="row justify-content-center">
-            {[
-              "/1.png",
-              "/2.png",
-              "/3.jpeg",
-              "/4.png",
-            ].map((image, index) => (
+            <div className="col-lg-3 col-md-6 col-6 d-flex small_screen_justify_start mb-3">
               <div
-                className="col-lg-3 col-md-6 col-12 d-flex justify-content-center"
-                key={index}
-
+                className="image-container tournament_section_width_height"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  position: "relative",
+                  overflow: "hidden",
+                  transform: "skew(-20deg)",
+                }}
               >
                 <div
+                  className="image1"
                   style={{
                     width: "100%",
-                    height: "300px",
-                    backgroundImage: `url(${image})`,
+                    height: "100%",
+                    backgroundImage: `url(/1.png)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    transform: "skew(-20deg)",
-                    overflow: "hidden",
+                    transition: "transform 0.5s ease",
                   }}
-                  className='small_screen_image_height'
+                ></div>
+                <div
+                  className="image2"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/2.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="heading-description"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    color: "white",
+                    textAlign: "center",
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
                 >
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: "rgba(0, 0, 0, 0.4)",
-                    }}
-                  ></div>
+                  <h2 className='text-white fw-bold'>ZONE 8 SPORTS</h2>
+                  <p>Bar & Grill</p>
                 </div>
               </div>
-            ))}
+            </div>
+
+
+
+            <div className="col-lg-3 col-md-6 col-6 d-flex small_screen_justify mb-3">
+              <div
+                className="image-container tournament_section_width_height"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  position: "relative",
+                  overflow: "hidden",
+                  transform: "skew(-20deg)",
+                }}
+              >
+                <div
+                  className="image1"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/2.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    transition: "transform 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="image2"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/3.jpeg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="heading-description"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    color: "white",
+                    textAlign: "center",
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                >
+                  <h2 className='text-white fw-bold'>EPIC BAR </h2>
+                  <p>Finely crafted cocktails draft beers, and wines</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-6 d-flex small_screen_justify_start mb-3">
+              <div
+                className="image-container tournament_section_width_height"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  position: "relative",
+                  overflow: "hidden",
+                  transform: "skew(-20deg)",
+                }}
+              >
+                <div
+                  className="image1"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/3.jpeg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    transition: "transform 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="image2"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/4.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="heading-description"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    color: "white",
+                    textAlign: "center",
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                >
+                  <h2 className='text-white fw-bold'>PARALLEL LOUNGE</h2>
+                  <p>Steak House</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-6 d-flex small_screen_justify mb-3">
+              <div
+                className="image-container tournament_section_width_height"
+                style={{
+                  width: "100%",
+                  height: "300px",
+                  position: "relative",
+                  overflow: "hidden",
+                  transform: "skew(-20deg)",
+                }}
+              >
+                <div
+                  className="image1"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/4.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    transition: "transform 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="image2"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundImage: `url(/1.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                ></div>
+                <div
+                  className="heading-description"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    color: "white",
+                    textAlign: "center",
+                    opacity: 0,
+                    transition: "opacity 0.5s ease",
+                  }}
+                >
+                  <h2 className='text-white fw-bold'>LOTUS CAFE</h2>
+                  <p>Vietnames-Influenced Banh mi</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </section>
 
       <section
-        className="discover-section"
+        className="discover-section small_screen_cta_margin_top"
         style={{
           backgroundImage: "url('/bg-image.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: "100px 0",
+          padding: "100px 50px",
           position: "relative",
         }}
       >
@@ -282,7 +519,7 @@ const Home = () => {
             card games tables.
           </p>
           <div className='mobile_view_btn'>
-            <button className='text-white btn_background_color px-4 py-2 border-0'>ALL GAMES</button>
+            <button className='text-white btn_background_color px-4 py-2 border-0 small_screen_button_width btn_hover'>ALL GAMES</button>
           </div>
         </div>
       </section>
@@ -295,7 +532,7 @@ const Home = () => {
         marginTop: "100px",
       }}>
         <div className='container' >
-          <div className='row justify-content-center align-items-end' style={{ height: '500px' }}>
+          <div className='row justify-content-center align-items-end girl_cta_height'>
           </div>
         </div>
       </section>
@@ -308,8 +545,19 @@ const Home = () => {
             </div>
           </div>
           <div className="row justify-content-center">
+
+            <div className='col-lg-10 small_screen_event_display_block'>
+              <div className='w-100 event_small_screen_image_height' style={{
+                backgroundImage: "url('/public/image_events.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "relative",
+                height: '370px',
+              }}>
+              </div>
+            </div>
             <div
-              className="col-xl-4 col-lg-6 col-md-6 col-12 d-flex justify-content-center"
+              className="col-xl-4 col-lg-6 col-md-6 col-12 small_screen_event_display"
               style={{ padding: "10px" }}
             >
               <div
@@ -334,7 +582,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className="col-xl-5 col-lg-6 col-md-6 col-12 d-flex justify-content-center"
+              className="col-xl-5 col-lg-6 col-md-6 col-12  small_screen_event_display"
               style={{ padding: "10px" }}
             >
               <div
@@ -347,31 +595,34 @@ const Home = () => {
                 }}
                 className="small_screen_image_height"
               >
-                <div
+               <div
+                  className="event_background_color"
                   style={{
                     width: "100%",
                     height: "100%",
                     backgroundColor: "rgba(0, 0, 0, 0.4)",
+                    transition: "background-color 0.3s ease, color 0.3s ease", // Smooth transition for background and text color
                   }}
                 >
-                  <div className='row px-5 pt-4'>
-                    <div className='col-lg-8'>
-                      <p className='text-white'>Weekly from 11am to 3pm</p>
-                      <h3 className='text-white'>Weekend Warriors Challenge</h3>
+                  <div className="row px-5 pt-4">
+                    <div className="col-lg-8">
+                      <p className="text-white">Weekly from 11am to 3pm</p>
+                      <h3 className="text-white">Weekend Warriors Challenge</h3>
                     </div>
-                    <div className='col-lg-4 align-self-center'>
-                      <div className='mb-3 text-start'>
-                        <button className='text-white btn_background_color px-4 py-3 border-0'>Read More</button>
+                    <div className="col-lg-4 align-self-center">
+                      <div className="mb-3 text-start">
+                        <button className="btn_background_color px-4 py-2 border-0 btn_hover read_more_text">
+                          Read More
+                        </button>
                       </div>
                     </div>
-
                   </div>
                 </div>
 
               </div>
             </div>
             <div
-              className="col-xl-4 col-lg-6 col-md-6 col-12 d-flex justify-content-center"
+              className="col-xl-4 col-lg-6 col-md-6 col-12 small_screen_event_display"
               style={{ padding: "10px" }}
             >
               <div
@@ -396,7 +647,7 @@ const Home = () => {
               </div>
             </div>
             <div
-              className="col-xl-5 col-lg-6 col-md-6 col-12 d-flex justify-content-center"
+              className="col-xl-5 col-lg-6 col-md-6 col-12 small_screen_event_display"
               style={{ padding: "10px" }}
             >
               <div
@@ -409,24 +660,28 @@ const Home = () => {
                 }}
                 className="small_screen_image_height"
               >
-                <div
+
+<div
+                  className="event_background_color"
                   style={{
                     width: "100%",
                     height: "100%",
                     backgroundColor: "rgba(0, 0, 0, 0.4)",
+                    transition: "background-color 0.3s ease, color 0.3s ease", // Smooth transition for background and text color
                   }}
                 >
-                  <div className='row px-5 pt-4'>
-                    <div className='col-lg-8'>
-                      <p className='text-white'>Sundays @ 9am</p>
-                      <h3 className='text-white'>Winter Wonderland Tournament</h3>
+                  <div className="row px-5 pt-4">
+                    <div className="col-lg-8">
+                      <p className="text-white">Sundays @ 9am</p>
+                      <h3 className="text-white">Winter Wonderland Tournament</h3>
                     </div>
-                    <div className='col-lg-4 align-self-center'>
-                      <div className='mb-3 text-start'>
-                        <button className='text-white btn_background_color px-4 py-3 border-0'>Read More</button>
+                    <div className="col-lg-4 align-self-center">
+                      <div className="mb-3 text-start">
+                        <button className="btn_background_color px-4 py-2 border-0 btn_hover read_more_text">
+                          Read More
+                        </button>
                       </div>
                     </div>
-
                   </div>
                 </div>
 
@@ -442,7 +697,8 @@ const Home = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-12'>
-              <h1 className='text-uppercase text-white text-center fw-bold breadcrump_size mb-5'>Why Join Our Events?</h1>
+              <h1 className='text-uppercase text-white text-center fw-bold breadcrump_size mb-5 d-none d-md-block'>Why Join Our Events?</h1>
+              <h1 className='text-uppercase text-white text-center fw-bold breadcrump_size mb-5 d-md-none'>Looking For <br /> Event Spaces?</h1>
             </div>
           </div>
           <div className='row justify-content-center align-items-center'>
@@ -470,18 +726,21 @@ const Home = () => {
                 ></div>
                 <h1 className='text-uppercase text-white fw-bold text-uppercase'>Massive Prizes</h1>
                 <p className='banner_text_color'>Exclusive Opportunities</p>
+                <div className='text-center d-md-none mb-3'>
+                  <img src="/public/x1.PNG" className='w-100 image_hover' alt="icon" />
+                </div>
                 <p className='text-white'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                 </p>
                 <div className='row'>
-                  <div className='col-lg-4'>
+                  <div className='col-6'>
                     <div className='mb-3 text-start'>
-                      <button className='text-white btn_background_color px-4 py-2 border-0'>Event Request</button>
+                      <button className='text-white btn_background_color px-4 py-2 border-0 btn_hover'>Event Requet</button>
                     </div>
                   </div>
-                  <div className='col-lg-6'>
+                  <div className='col-6'>
                     <div className='mb-3 text-start'>
-                      <button className='text-white btn_background_color px-4 py-2 border-0'>Event Details</button>
+                      <button className='text-white btn_background_color px-4 py-2 border-0 btn_hover'>Event Details</button>
                     </div>
                   </div>
                 </div>
@@ -489,8 +748,8 @@ const Home = () => {
               </div>
             </div>
             <div className='col-lg-6 col-sm-12'>
-              <div className='text-center'>
-                <img src="/public/x1.PNG" className='w-100' alt="icon" />
+              <div className='text-center d-none d-md-block'>
+                <img src="/public/x1.PNG" className='w-100 image_hover' alt="icon" />
               </div>
             </div>
 
@@ -525,13 +784,16 @@ const Home = () => {
                 ></div>
                 <h1 className='text-uppercase text-white fw-bold text-uppercase'>Casino Conquest Card Academy</h1>
                 <p className='banner_text_color'>Learn from the professionals</p>
+                <div className='text-center d-md-none mb-3'>
+                  <img src="/public/2nd.PNG" className='w-100 image_hover' alt="icon" />
+                </div>
                 <p className='text-white'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div className='row'>
                   <div className='col-lg-12'>
                     <div className='mb-3 text-start'>
-                      <button className='text-white btn_background_color px-4 py-2 border-0'>Join Academy</button>
+                      <button className='text-white btn_background_color px-4 py-2 border-0 small_screen_button_width btn_hover'>Join Academy</button>
                     </div>
                   </div>
                 </div>
@@ -539,8 +801,8 @@ const Home = () => {
               </div>
             </div>
             <div className='col-lg-6 col-sm-12'>
-              <div className='text-center'>
-                <img src="/public/2nd.PNG" className='w-100' alt="icon" />
+              <div className='text-center d-none d-md-block'>
+                <img src="/public/2nd.PNG" className='w-100 image_hover' alt="icon" />
               </div>
             </div>
           </div>
@@ -553,7 +815,7 @@ const Home = () => {
           backgroundImage: "url('/last_image.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: "100px 0",
+          padding: "100px 30px",
           position: "relative",
         }}
       >
@@ -577,7 +839,7 @@ const Home = () => {
           }}
         >
           <div className='row'>
-            <div className='col-lg-4'>
+            <div className='col-lg-4 mobile_view_cta_footer_text'>
               <div>
                 <h1 className='text-uppercase pt-5'>
                   Sign up Now!
@@ -589,13 +851,13 @@ const Home = () => {
             </div>
             <div className='col-lg-8 align-self-center'>
               <div className='row'>
-                <div className='col-lg-9 text-end'>
-                  <input type='text' placeholder='Your name' style={{ background: '#FFFFFF33' }} className='my-3 border-0 px-2 py-2 text-white w-50' /><br />
-                  <input type='email' placeholder='Your email' style={{ background: '#FFFFFF33' }} className='border-0 px-2 py-2 text-white w-50' />
+                <div className='col-lg-9 subscribe_center'>
+                  <input type='text' placeholder='Your name' style={{ background: '#FFFFFF33' }} className='my-3 border-0 px-2 py-2 text-white w-75' /><br />
+                  <input type='email' placeholder='Your email' style={{ background: '#FFFFFF33' }} className='border-0 px-2 py-2 text-white w-75' />
                 </div>
-                <div className='col-lg-3 align-self-center'>
-                  <div className='text-end'>
-                    <button className='text-white btn_background_color px-4 py-2 border-0'>Subscribe</button>
+                <div className='col-lg-3 align-self-center mt-2'>
+                  <div className='subscribe_center'>
+                    <button className='text-white btn_background_color px-4 py-2 border-0 w-75 btn_hover'>Subscribe</button>
                   </div>
                 </div>
               </div>

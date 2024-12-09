@@ -101,7 +101,7 @@
 /* //////////////////////////////////////////////////////////////// */
 
 .bg-image-about{
-    background-image: url("/about.webp");
+    background-image: linear-gradient(to top, rgb(0 0 0 / 98%), rgba(0, 0, 0, 0)), url('/about.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; 
@@ -110,13 +110,14 @@
 .bg-image_second{
     background-image: url("/about_2.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: 50% 50%; 
 }
 
 
 .bg-image_contact{
     background-image: url("/contact-2.webp");
+    /* background-image: linear-gradient(to top, rgb(0 0 0 / 98%), rgba(0, 0, 0, 0)), url('/contact-2.webp'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; 
@@ -156,3 +157,118 @@ input::placeholder {
 .mobile_view_btn{
     text-align: end;
 }
+
+
+/* ///////////////////////////////////////////////////////////////// */
+
+.banner_height{
+    height: 700px;
+}
+
+.girl_cta_height{
+    height: 500px;
+}
+
+.about_btn_hover {
+    background-color: transparent;
+    border: 2px solid white;
+    transform: skew(-20deg) !important;
+    color: white;
+    transition: all 0.25s ease-out; /* Smooth transition for all properties */
+    box-shadow: none; /* Initially, no shadow */
+}
+
+.about_btn_hover:hover {
+    background-color: black; /* Background color changes on hover */
+    color: white; /* Ensure text color remains white */
+    box-shadow: 0px -1px 18px 11px rgb(167 166 166 / 58%); /* Adds shadow effect */
+}
+.contact_btn_adjust {
+    transform: translate(-251%, -50%) skew(-20deg) !important;
+}
+
+
+.btn_hover {
+    transform: skew(-20deg) !important;
+    transition: all 0.25s ease-out; /* Smooth transition for all properties */
+    box-shadow: none; /* Initially, no shadow */
+}
+
+.btn_hover:hover {
+    color: white; /* Ensure text color remains white */
+    box-shadow: 0px -1px 18px 11px rgb(167 166 166 / 58%); /* Adds shadow effect */
+}
+.small_screen_image_height_new_change:hover {
+    transform: skew(-20deg) translateY(-20px) !important; /* Moves the image up */
+  }
+
+
+  /* Hover Effect - Reveal second image and heading */
+.image-container:hover .image1 {
+    transform: translateY(0px) !important; /* Move the first image upwards */
+  }
+  
+  .image-container:hover .image2 {
+    opacity: 1 !important; /* Show the second image */
+    /* transform: scale(1.1) !important; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important; /* Add gradient overlay */
+    background-size: cover; /* Ensure the background covers the container */
+    background-position: center; /* Keep the background centered */
+  }
+  
+  .image-container:hover .heading-description {
+    opacity: 1 !important; /* Show heading and description */
+  }
+
+  .font_color_join{
+    color: #675d5d !important;
+  }
+
+  .font_color_join:hover{
+    color: #E00000 !important;
+    cursor: pointer;
+  }
+
+
+  .image_hover {
+    transition: all 0.25s ease-out; /* Smooth transition for all properties */
+    box-shadow: none; /* Initially, no shadow */
+}
+
+.image_hover:hover {
+    color: white; /* Ensure text color remains white */
+    box-shadow: 0px -1px 18px 11px rgb(167 166 166 / 58%); /* Adds shadow effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.event_background_color {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  }
+
+  .event_background_color:hover {
+    background-color: white !important; /* Background color change on hover */
+    color: black; /* Text color change on hover */
+  }
+
+  .event_background_color:hover .text-white {
+    color: black !important; /* Text color inside div changes on hover */
+  }
+
+  .event_background_color .text-white {
+    color: white; /* Default text color */
+  }
+  .read_more_text{
+    color: white !important;
+  }
+
